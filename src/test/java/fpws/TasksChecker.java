@@ -12,7 +12,8 @@ public class TasksChecker {
         Task.sequence( List.list(
                 Task.sequence( FunksjonerTest.tasks() ),
                 Task.sequence( FoldTest.tasks() ),
-                Task.sequence( MapTest.tasks() )
+                Task.sequence( MapTest.tasks() ),
+                Task.sequence( FlatMapTest.tasks() )
         ) ).check();
 
     }
