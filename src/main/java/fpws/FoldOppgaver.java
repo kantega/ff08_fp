@@ -11,17 +11,17 @@ public class FoldOppgaver {
     //På datastrukturer der det har betydning hvilken "ende" man starter har man foldLeft og foldRight.
 
     //Bruk List.range til å lage en liste med tall
-    public static final List<Integer> ints = null;
+    public static final List<Integer> ints = List.range(10,20);
 
     //List.foldLeft1 er en metode som kollapser listen til en verdi med samme type som listens innhold.
 
     //Summer alle tall i listen (hint:bruk fuksjon som du tidligere har implementert)
     //hint fj.List har en funksjon som heter foldLeft1
-    public static final Integer sumOfList1 = null;
+    public static final Integer sumOfList1 = ints.foldLeft1( FunksjonOppgaver.plus );
 
 
     //Hva skjer når listen er bare ett element lang?
-    public static final Integer sumOfList2 = null;
+    public static final Integer sumOfList2 = ints.take(1).foldLeft1( FunksjonOppgaver.plus );
 
     //Går det an å bruke funksjonen minus i listen?
     //Hva blir evt. resultatet?

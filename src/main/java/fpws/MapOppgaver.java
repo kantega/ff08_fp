@@ -22,6 +22,7 @@ public class MapOppgaver {
     //Finn summen av lengden av stringene i listen på to måter.
     public static final Integer listStringLength1 = null;
     public static final Integer listStringLength2 = null;
+
     //Alle typer med funksjonen map() kalles funktorer.
     //Vi kan definere typer utifra egenskapene dens i tillegg til den semantiske betydningen.
 
