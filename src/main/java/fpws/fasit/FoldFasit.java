@@ -1,10 +1,8 @@
-package fpws;
+package fpws.fasit;
 
 import fj.F2;
 import fj.Monoid;
 import fj.data.List;
-
-import static fpws.FunksjonsFasit.plus;
 
 public class FoldFasit{
 
@@ -18,11 +16,11 @@ public class FoldFasit{
 
     //Summer alle tall i listen
     //hint fj.List har en funksjon som heter foldLeft1
-    public static final Integer sumOfList1 = ints.foldLeft1( plus );
+    public static final Integer sumOfList1 = ints.foldLeft1( FunksjonerFasit.plus );
 
 
     //Hva skjer når listen er bare ett element lang?
-    public static final Integer sumOfList2 = ints.take( 1 ).foldLeft1( plus );
+    public static final Integer sumOfList2 = ints.take( 1 ).foldLeft1( FunksjonerFasit.plus );
 
     //Går det an å bruke funksjonen minus i listen?
     //Hva blir evt. resultatet?
@@ -61,7 +59,7 @@ public class FoldFasit{
 
     //Bruk foldLeft med rett utgangspunkt og funksjon for addisjon for å få de samme resultatene
     //som over
-    public Integer sumOfInts = ints.foldLeft( plus, zero1 );
+    public Integer sumOfInts = ints.foldLeft( FunksjonerFasit.plus, zero1 );
 
 
     //Kombinasjonen med et utgangspunkt (zero) og en summerende (sum) funksjon kalles en Monoide
@@ -96,6 +94,7 @@ public class FoldFasit{
 
     //Diskusjon: Finnes det en monoid for Map?
 
-    //Dersom vi har en fold metode på et objekt, kan vi uten å kjenne innholdet transformere den til en annen type.
-    //Pause
+    //Dersom vi har en fold metode på et objekt, kan vi uten å kjenne implementasjonen til typen transformere den til en annen type.
+
+    //La oss fortsette med map
 }

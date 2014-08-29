@@ -1,9 +1,10 @@
-package fpws;
+package fpws.fasit;
 
 import fj.Monoid;
 import fj.data.List;
+import fj.data.Option;
 
-import static fpws.FunksjonsFasit.strLength;
+import static fpws.fasit.FunksjonerFasit.strLength;
 
 public class MapFasit {
 
@@ -21,14 +22,22 @@ public class MapFasit {
     //Vi kan også referere til metoden direkte fra klassen ved å bruke ::
     public static final List<Integer> lengths3 = strings.map(String::length);
 
-    //Legg sammen alle strengene i listen.
+    //Legg sammen alle strengene i listen ved hjelp fold og/eller map og en monoide.
     //Finn summen av lengden av stringene i listen på to måter.
 
     public static final Integer listStringLength1 = strings.foldLeft( Monoid.stringMonoid.sum(),Monoid.stringMonoid.zero() ).length();
     public static final Integer listStringLength2 = strings.map(strLength).foldLeft( Monoid.intAdditionMonoid.sum(),Monoid.intAdditionMonoid.zero() );
 
     //Alle typer med funksjonen map() kalles funktorer.
-    //Vi ser nå at vi kan definere typer utifra egenskapene dens i tillegg til den semantiske betydningen.
+    //Vi kan definere typer utifra egenskapene dens i tillegg til den semantiske betydningen.
 
-    //Pause
+    //En annen funktor er Option
+    public static final Option<String> maybeString = Option.some( "foo" );
+
+    //Akkurat som en liste som inneholder et ukjent antall elementer inneholder en option kanskje et element
+    //Finn lengden av innholdet i meybeString
+    public static final Option<Integer> maybeLength = maybeString.map(strLength);
+
+
+    //La oss gå videre til flatMap
 }
