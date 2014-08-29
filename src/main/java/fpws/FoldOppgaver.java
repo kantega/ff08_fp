@@ -36,7 +36,7 @@ public class FoldOppgaver {
 
 
     //Hva skjer når det er ingen elementer i listen?
-    //public final String noInts = List.<Integer>nil().foldLeft1( plus );
+    //public static final Integer noInts = List.<Integer>nil().foldLeft1( FunksjonOppgaver.plus );
 
     //Vi ser at foldLeft1 har en svakhet. Den må ha ett element i listen for at vi kan redusere listen.
     //For at vi ikke skal få runtime feil må vi bruke funksjonalitet som ikke tillated dette.

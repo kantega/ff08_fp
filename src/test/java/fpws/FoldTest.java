@@ -11,26 +11,6 @@ import static fpws.TasksChecker.currySafe;
 public class FoldTest {
 
     public static List<Task>  tasks(){
-        /*
-    public static final List<Integer> ints = null;
-    public static final Integer sumOfList1 = null;
-
-    public static final Integer sumOfList2 = null;
-    public final Integer zero1 = null;
-    public final F2<Integer,Integer,Integer> sum2 = null;
-    public final Integer zero2 = null;
-    public Integer sumOfInts = null;
-
-    public final String zeroString = "";
-    public static final F2<String, String, String> sumString = null;
-
-    public static final Monoid<String> strMonoid = Monoid.stringMonoid;
-
-
-    public static final <A> Monoid<List<A>> listMonoid(){
-        return null;
-    }
-         */
         return List.list(
                 Task.heading( "Fold" ),
                 Task.writeValue( "ints",FoldOppgaver.ints, Show.listShow( Show.intShow ) ),
