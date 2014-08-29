@@ -26,7 +26,7 @@ public class FlatMapTest {
         public static final Option<String> maybeNumber3 = null;
          */
         return List.list(
-
+                Task.heading( "Flatmap" ),
                 Task.testFunc(
                         "parseInt",
                         FlatMapOppgaver.parseInt,

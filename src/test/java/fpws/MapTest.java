@@ -18,6 +18,7 @@ public class MapTest {
     public static final Option<Integer> maybeLength = null;
          */
         return List.list(
+                Task.heading( "Map" ),
                 Task.assertValue( "lengths", MapOppgaver.lengths, (list) -> list.equals( MapOppgaver.strings.map( String::length ) ), Show.listShow( Show.intShow ) ),
                 Task.assertValue( "lengths2", MapOppgaver.lengths2, (list) -> list.equals( MapOppgaver.strings.map( String::length ) ), Show.listShow( Show.intShow ) ),
                 Task.assertValue( "lengths3", MapOppgaver.lengths3, (list) -> list.equals( MapOppgaver.strings.map( String::length ) ), Show.listShow( Show.intShow ) ),

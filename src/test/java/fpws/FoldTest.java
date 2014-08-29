@@ -35,7 +35,7 @@ public class FoldTest {
                 Task.heading( "Fold" ),
                 Task.writeValue( "ints",FoldOppgaver.ints, Show.listShow( Show.intShow ) ),
                 Task.assertValue( "sumOfList1",FoldOppgaver.sumOfList1,(length)->FoldOppgaver.ints.foldLeft( Monoid.intAdditionMonoid.sum(),Monoid.intAdditionMonoid.zero() ).equals(length),Show.intShow ),
-                Task.assertValue( "sumOfList2",FoldOppgaver.sumOfList2,(length)->FoldOppgaver.ints.foldLeft( Monoid.intAdditionMonoid.sum(),Monoid.intAdditionMonoid.zero() ).equals(length),Show.intShow ),
+                Task.assertValue( "sumOfList2",FoldOppgaver.sumOfList2,(length)->FoldOppgaver.ints.take(1).foldLeft( Monoid.intAdditionMonoid.sum(),Monoid.intAdditionMonoid.zero() ).equals(length),Show.intShow ),
                 Task.assertValue( "zero1",FoldOppgaver.zero1,(value)->value.equals( 0 ),Show.intShow ),
                 Task.testFunc2( "sum2", arbInteger,arbInteger,currySafe(FoldOppgaver.sum2),(Integer x,Integer y)->x*y ),
                 Task.assertValue( "zero1",FoldOppgaver.zero2,(value)->value.equals( 1 ),Show.intShow ),
