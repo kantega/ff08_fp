@@ -19,7 +19,7 @@ public class FunksjonerFasit {
     public static final F<Integer, Integer> negate = (x) -> -x;
 
     //Lag en funksjon som legger sammen to tall
-    public static final F2<Integer, Integer, Integer> plus = (x, y) -> x + y;
+    public static final F2<Integer, Integer, Integer> plus = (x, y) -> x+y;
 
     //Lag en funksjon som trekker fra to tall
     public static final F2<Integer, Integer, Integer> minus = (x, y) -> x - y;

@@ -1,26 +1,27 @@
-package fpws.fasit;
+package fpws;
 
 import fj.F2;
 import fj.Monoid;
 import fj.data.List;
 
-public class FoldFasit{
+public class FoldOppgaver {
 
 
     //Fold er en fellesbetegnelse på å kollapse datastrakturer (også kalt katamorfisme)
     //På datastrukturer der det har betydning hvilken "ende" man starter har man foldLeft og foldRight.
 
-    public static final List<Integer> ints = List.range( 10, 20 );
+    //Bruk List.range til å lage en liste med tall
+    public static final List<Integer> ints = null;
 
     //List.foldLeft1 er en metode som kollapser listen til en verdi med samme type som listens innhold.
 
-    //Summer alle tall i listen
+    //Summer alle tall i listen (hint:bruk fuksjon som du tidligere har implementert)
     //hint fj.List har en funksjon som heter foldLeft1
-    public static final Integer sumOfList1 = ints.foldLeft1( FunksjonerFasit.plus );
+    public static final Integer sumOfList1 = null;
 
 
     //Hva skjer når listen er bare ett element lang?
-    public static final Integer sumOfList2 = ints.take( 1 ).foldLeft1( FunksjonerFasit.plus );
+    public static final Integer sumOfList2 = null;
 
     //Går det an å bruke funksjonen minus i listen?
     //Hva blir evt. resultatet?
@@ -47,19 +48,19 @@ public class FoldFasit{
 
 
 
-    //Aå, hvilket utgangspunkt bruker man for addisjon?
-    public final Integer zero1 = 0;
+    //Så, hvilket utgangspunkt bruker man for addisjon?
+    public static final Integer zero1 = null;
 
     //Hvilken annen måte enn addisjon kan vi beregne tall der faktorenes orden er likegyldig?
     //Multiplikasjon
-    public final F2<Integer,Integer,Integer> sum2 = (x,y) -> x*y;
+    public static final F2<Integer,Integer,Integer> sum2 = null;
 
     //Hvilket utgangspunkt brukes her?
-    public final Integer zero2 = 1;
+    public static final Integer zero2 = null;
 
     //Bruk foldLeft med rett utgangspunkt og funksjon for addisjon for å få de samme resultatene
     //som over
-    public Integer sumOfInts = ints.foldLeft( FunksjonerFasit.plus, zero1 );
+    public static Integer sumOfInts = null;
 
 
     //Kombinasjonen med et utgangspunkt (zero) og en summerende (sum) funksjon kalles en Monoide
@@ -71,9 +72,9 @@ public class FoldFasit{
 
     //Definer zero og sum for string monoiden
     //Hvilket utgangspunkt bruker man for string concatenering?
-    public final String zeroString = "";
+    public static final String zeroString = "";
     //Kan vi legge sammen to strenger?
-    public static final F2<String, String, String> sumString = (one, other) -> one + other;
+    public static final F2<String, String, String> sumString = null;
 
     //I functionaljava er en monoide definert med Monoid<A> klassen
     //Den inneholder en zero verdi og en sum funksjon
@@ -82,8 +83,11 @@ public class FoldFasit{
 
     //Definer zero og sum for List monoiden
     public static final <A> Monoid<List<A>> listMonoid(){
-        return Monoid.monoid( (List<A> list1,List<A> list2)->list1.append( list2 ),List.<A>nil() );
+        return null;
     }
+
+
+
 
 
 
